@@ -8,14 +8,53 @@ debemos mostrar cuantas bolsas se necesitan de cada uno para las medidas que nos
 */
 
 function Rectangulo () 
-{
+{ 
+    let Largo;
+    let Ancho;
+    let CantiAlamb = 3;
+
+        Largo  = document.getElementById('txtIdLargo').value;
+        Ancho  = document.getElementById('txtIdAncho').value;
+        Largo  = parseInt(Largo);
+        Ancho  = parseInt(Ancho);
+        Acomprar = ((Largo + Ancho ) *2) * CantiAlamb ;
+        alert( "Cantidad de alambre a comprar es " + Acomprar + " metros de alambre");
+
 
 }
+
 function Circulo () 
-{
+{  
+    let Radio;
+    let CantiAlamb = 3;
+        
+        Radio = document.getElementById('txtIdRadio').value;
+        Radio = parseInt(Radio);
+        Acomprar = Radio * CantiAlamb;
+        alert( "Cantidad de alambre a comprar es " + Acomprar + " metros de alambre");
+
 	
 }
+
 function Materiales () 
 {
-	
-}
+    let Largo;
+    let Ancho;
+    let Cemento     = 1/2;
+    let Cal         = 1/3;
+    var AcomprarCemento;
+
+        Largo  = document.getElementById('txtIdLargo').value;
+        Ancho  = document.getElementById('txtIdAncho').value;
+        Radio  = document.getElementById('txtIdRadio').value;
+        Largo  = parseInt(Largo);
+        Ancho  = parseInt(Ancho);
+        Radio  = parseInt(Radio);
+
+        AcomprarCemento = (Largo * Cemento) + (Ancho * Cemento)  + (Radio * Cemento);
+        AcomprarCal     = (Largo * Cal) + (Ancho * Cal)  + (Radio * Cal);
+        AcomprarCemento = Math.round(AcomprarCemento) ;
+        AcomprarCal     =  Math.round(AcomprarCal) ;
+        alert("Se deben comprar " + AcomprarCemento + " bolsas de cemento y " +
+        + AcomprarCal + " bolsas de cal " );
+    } 
