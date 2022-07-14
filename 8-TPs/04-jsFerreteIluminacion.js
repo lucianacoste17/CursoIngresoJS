@@ -10,5 +10,32 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+    let CantidadLamp;
+    let PrecioLapara;
+    let Descuento;
+    let Marca;
+
+    CantidadLamp = document.getElementById("txtIdCantidad").value;
+    Descuento    = document.getElementById("txtIdprecioDescuento").value;
+    Marca        =  document.getElementById("Marca").value;
+    CantidadLamp = parseInt(CantidadLamp);
+    Descuento    = parseInt(Descuento);
+    PrecioLapara = 36;
+
+    
+	if( 
+    CantidadLamp == 5  && Marca == "ArgentinaLuz")
+     {     
+        Descuento = PrecioLapara - (PrecioLapara * 0.4)
+     }
+    else 
+    (CantidadLamp = 5 )
+     { 
+        Descuento = PrecioLapara - (PrecioLapara * 0.3)
+
+     }
+    
+    alert(Descuento);
+
+
 }

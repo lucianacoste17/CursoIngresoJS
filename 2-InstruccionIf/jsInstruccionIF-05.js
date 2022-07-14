@@ -1,6 +1,18 @@
-function mostrar()
-{
-	//tomo la edad  
-	alert("ok");
+/**
+ Al ingresar una edad solo debemos informar si la persona NO es adolescente.
+ */
 
-}//FIN DE LA FUNCIÓN
+
+ function mostrar()
+ { 
+	 let edad;
+	 edad= document.getElementById("txtIdEdad").value;
+	 edad= parseInt(edad);
+ 
+	 if( edad >= 23)
+ 
+	 { 
+	   alert("Usted no es  adolescente");
+	 }
+	 
+ }
