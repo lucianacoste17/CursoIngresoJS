@@ -22,20 +22,57 @@ function CalcularPrecio ()
     Descuento    = parseInt(Descuento);
     PrecioLapara = 36;
 
+/*Si compra 5  lamparitas bajo consumo marca "ArgentinaLuz" 
+se hace un descuento del 40 % y si es de otra marca el descuento es del 30% */
+	if 
+    (CantidadLamp == 5 )
+     {  
+        if (Marca == "ArgentinaLuz")  
+        {   
+            Descuento = PrecioLapara - (PrecioLapara * 0.4);
+        }
+        else 
+       { 
+            Descuento = PrecioLapara - (PrecioLapara * 0.3);
+       }
+     } 
+       
+/*Si compra 4  lamparitas bajo consumo marca "ArgentinaLuz" o “FelipeLamparas” 
+se hace un descuento del 25 % y si es de otra marca el descuento es del 20% */
+    if 
+    (CantidadLamp == 4 )
+    {  
+      if (Marca == "ArgentinaLuz" || "FelipeLamparas")  
+        {   
+            Descuento = PrecioLapara - (PrecioLapara * 0.25);
+        }
+        else 
+    { 
+            Descuento = PrecioLapara - (PrecioLapara * 0.2);
+    }
+     }  
     
-	if( 
-    CantidadLamp == 5  && Marca == "ArgentinaLuz")
-     {     
-        Descuento = PrecioLapara - (PrecioLapara * 0.4)
-     }
+
+/*Si compra 3  lamparitas bajo consumo marca "ArgentinaLuz"  el descuento 
+es del 15%, si es  “FelipeLamparas” se hace un descuento del 10 % y si es de otra marca un 5%*/
+    if 
+    (CantidadLamp == 3)
+    
+        if (Marca == "ArgentinaLuz" )
+      {   
+            Descuento = PrecioLapara - (PrecioLapara * 0.15);
+      }
+        if 
+        ( Marca == "FelipeLamparas" )
+      {   
+            Descuento = PrecioLapara - (PrecioLapara * 0.10);
+      }
     else 
-    (CantidadLamp = 5 )
-     { 
-        Descuento = PrecioLapara - (PrecioLapara * 0.3)
-
-     }
+    { 
+            Descuento = PrecioLapara - (PrecioLapara * 0.5);
+    }
     
-    alert(Descuento);
 
-
+alert(Descuento);
 }
+ 
